@@ -6,42 +6,43 @@ A web-based image annotation interface built with **Vue 3** and **Pinia**, suppo
 
 ## ✨ Features
 
-- **📤 Image Upload**
+### 📤 Image Upload
 
-  - Drag-and-drop or click-to-upload
-  - Uploader auto-hides when an image is active
-  - Show/hide toggle for uploader from the toolbar
+- Drag-and-drop or click-to-upload
+- Uploader auto-hides once an image is active
+- Toggle uploader visibility from the toolbar
 
-- **🔺 Polygon Annotations**
+### 🔺 Polygon Annotations
 
-  - Click to place points
-  - Click near the first point to close the shape
-  - Drag points or move the entire shape
-  - Double-click a point to remove it
-  - Press `Esc` to cancel drawing
+- Click to place points
+- Click near the first point to close the shape
+- Drag points or move the entire polygon
+- Double-click a point to remove it
+- Press `Esc` to cancel drawing
 
-- **➡️ Arrow Annotations**
+### ➡️ Arrow Annotations
 
-  - Click and drag to create an arrow
-  - Edit start or end point by dragging
-  - Drag center to move the whole arrow
+- Click and drag to draw an arrow
+- Drag start or end points to adjust
+- Drag center handle to move the entire arrow
 
-- **📋 Sidebar Zone Management**
+### 📋 Sidebar Zone Management
 
-  - Displays all annotation zones
-  - Inline editing for names and labels
-  - Select or delete annotations
-  - Live updates with canvas
+- View all annotation zones
+- Inline rename and label editing
+- Select or delete annotations
+- Real-time canvas sync
 
-- **🛠 Toolbar**
+### 🛠 Toolbar
 
-  - Select tools: `Select`, `Polygon`, `Arrow`
-  - JSON export (only shown when data is present)
-  - Toggle image uploader
+- Tool selection: `Select`, `Polygon`, `Arrow`
+- JSON export button (visible only when data exists)
+- Toggle image uploader
 
-- **⌨️ Keyboard Shortcuts**
-  - `Esc`: Deselect or cancel current action
-  - `Backspace` / `Delete`: Remove selected annotation
+### ⌨️ Keyboard Shortcuts
+
+- `Esc`: Deselect or cancel current action
+- `Backspace` / `Delete`: Remove selected annotation
 
 ---
 
@@ -51,26 +52,30 @@ A web-based image annotation interface built with **Vue 3** and **Pinia**, suppo
 - [Pinia](https://pinia.vuejs.org/)
 - TypeScript
 - Composition API
-- SVG overlays for drawing
+- SVG for overlays
+
+---
 
 ---
 
 ## 📦 Annotation JSON Format
 
-Polygon:
+### Polygon & Arrow
 
 ````json
+
 {
   "id": "unique-id",
   "type": "polygon",
   "name": "Zone A",
   "subLabel": "Operational Area",
-  "points": [{ "x": 0.25, "y": 0.4 }, { "x": 0.3, "y": 0.5 }]
+  "points": [
+    { "x": 0.25, "y": 0.4 },
+    { "x": 0.3, "y": 0.5 }
+  ]
 }
 
-Arrow:
-
-```json
+Arrow
 
 
 {
@@ -100,4 +105,5 @@ npm run dev
 ```sh
 npm run build
 ```
+
 # image-annotation-tool
