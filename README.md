@@ -2,6 +2,8 @@
 
 A web-based image annotation interface built with **Vue 3** and **Pinia**, supporting precise polygon and arrow markup on uploaded images.
 
+demo of the site in action [text](https://zippy-bavarois-170431.netlify.app/)
+
 ---
 
 ## ✨ Features
